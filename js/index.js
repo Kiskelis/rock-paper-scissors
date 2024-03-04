@@ -1,56 +1,79 @@
 let min = 1;
 let max = 3;
-
-let randomNumber = Math.floor((Math.random() * max) + min);
+let playerSelection;
 let computerSelection;
-let playerSelection = prompt("Please select : Rock? Paper? Scissors").toLowerCase()
-let error;
-
-function getComputerChoice (){
-    if (randomNumber === 1) {
-        computerSelection = "rock";
-    }
-    else if (randomNumber === 2) {
-        computerSelection = "paper";
-    }
-    else if (randomNumber === 3) {
-        computerSelection = "scissors";
-    }
-}
+// 1 = rock ; 2 = paper ; 3 = scissors;
+const outcome = document.querySelector("#outcome");
 
 function playRound(playerSelection, computerSelection){
-    if(playerSelection === "rock" && computerSelection === "rock"){
-        console.log("ROCK vs ROCK. It's a draw!")
+    if(playerSelection === "rock" && computerSelection === 1){
+        outcome.textContent = "ROCK vs ROCK. It's a draw!";
     }
-    else if(playerSelection === "paper" && computerSelection === "paper"){
-        console.log("PAPER vs PAPER. It's a draw!")
+    else if(playerSelection === "paper" && computerSelection === 2){
+        outcome.textContent = "PAPER vs PAPER. It's a draw!";
     }
-    else if(playerSelection === "scissors" && computerSelection === "scissors"){
-        console.log("SCISSORS vs SCISSORS. It's a draw!")
+    else if(playerSelection === "scissors" && computerSelection === 3){
+        outcome.textContent = "SCISSORS vs SCISSORS. It's a draw!";
     }
-    if(playerSelection === "rock" && computerSelection === "paper"){
-        console.log("ROCK vs PAPER. Paper beats rock. You loose!")
+    else if(playerSelection === "rock" && computerSelection === 2){
+        outcome.textContent = "ROCK vs PAPER. Paper beats rock. You loose!";
     }
-    if(playerSelection === "rock" && computerSelection === "scissors"){
-        console.log("ROCK vs SCISSORS. Rock beats scissors. You win!")
+    else if(playerSelection === "rock" && computerSelection === 3){
+        outcome.textContent = "ROCK vs SCISSORS. Rock beats scissors. You win!"
     }
-    else if(playerSelection === "paper" && computerSelection === "rock"){
-        console.log("PAPER vs ROCK. Paper beats rock. You win!")
+    else if(playerSelection === "paper" && computerSelection === 1){
+        outcome.textContent = "PAPER vs ROCK. Paper beats rock. You win!"
     }
-    else if(playerSelection === "paper" && computerSelection === "scissors"){
-        console.log("PAPER vs SCISSORS. Scissors beats paper. You loose!")
+    else if(playerSelection === "paper" && computerSelection === 3){
+        outcome.textContent = "PAPER vs SCISSORS. Scissors beats paper. You loose!"
     }
-    else if(playerSelection === "scissors" && computerSelection === "rock"){
-        console.log("SCISSORS vs ROCK. Rock beats scissors. You loose!")
+    else if(playerSelection === "scissors" && computerSelection === 1){
+        outcome.textContent = "SCISSORS vs ROCK. Rock beats scissors. You loose!"
     }
-    else if(playerSelection === "scissors" && computerSelection === "paper"){
-        console.log("SCISSORS vs PAPER. Scissors beats paper. You win!")
+    else if(playerSelection === "scissors" && computerSelection === 2){
+        outcome.textContent = "SCISSORS vs PAPER. Scissors beats paper. You win!"
+    }
+    else if(playerSelection === "scissors" && computerSelection === 2){
+        outcome.textContent = "SCISSORS vs PAPER. Scissors beats paper. You win!"
     }
 
 }
 
-getComputerChoice();
+let rock = document.querySelector("#rock")
+rock.addEventListener("click",(e) => {
+playerSelection = "rock";
+computerSelection =  Math.floor((Math.random() * max) + min);
 playRound(playerSelection, computerSelection);
+});
+
+
+let paper = document.querySelector("#paper")
+paper.addEventListener("click",(e) => {
+playerSelection = "paper";
+computerSelection =  Math.floor((Math.random() * max) + min);
+playRound(playerSelection, computerSelection);
+});
+
+let scissors = document.querySelector("#scissors")
+scissors.addEventListener("click",(e) => {
+playerSelection = "scissors";
+computerSelection =  Math.floor((Math.random() * max) + min);
+playRound(playerSelection, computerSelection);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
