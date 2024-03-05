@@ -142,6 +142,7 @@ reset.addEventListener("click",(e) => {
     computerNumbers = 0;
     computerPoints.textContent = `Computer points : ${computerNumbers}`;
     winer.textContent = "";
+    rounds = "";
     });
 
 
