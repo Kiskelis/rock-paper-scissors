@@ -90,6 +90,16 @@ else if(computerNumbers > playerNumbers && rounds === roundsPlayedNum){
 else if(computerNumbers === playerNumbers && rounds === roundsPlayedNum){
     winer.textContent = "NOBODY WINS THIS TIME..";
 }
+if(rounds < roundsPlayedNum){
+    playerNumbers = 0;
+    playerPoints.textContent = `Player points : ${playerNumbers}`;
+    roundsPlayedNum = 0;
+    roundsPlayed.textContent = `Rounds played : ${roundsPlayedNum}`;
+    computerNumbers = 0;
+    computerPoints.textContent = `Computer points : ${computerNumbers}`;
+    winer.textContent = "";
+    rounds = "";
+}
 });
 
 
@@ -111,6 +121,16 @@ else if(computerNumbers > playerNumbers && rounds === roundsPlayedNum){
 else if(computerNumbers === playerNumbers && rounds === roundsPlayedNum){
     winer.textContent = "NOBODY WINS THIS TIME..";
 }
+if(rounds < roundsPlayedNum){
+    playerNumbers = 0;
+    playerPoints.textContent = `Player points : ${playerNumbers}`;
+    roundsPlayedNum = 0;
+    roundsPlayed.textContent = `Rounds played : ${roundsPlayedNum}`;
+    computerNumbers = 0;
+    computerPoints.textContent = `Computer points : ${computerNumbers}`;
+    winer.textContent = "";
+    rounds = "";
+}
 });
 
 let scissors = document.querySelector("#scissors");
@@ -131,7 +151,18 @@ else if(computerNumbers > playerNumbers && rounds === roundsPlayedNum){
 else if(computerNumbers === playerNumbers && rounds === roundsPlayedNum){
     winer.textContent = "NOBODY WINS THIS TIME..";
 }
+if(rounds < roundsPlayedNum){
+    playerNumbers = 0;
+    playerPoints.textContent = `Player points : ${playerNumbers}`;
+    roundsPlayedNum = 0;
+    roundsPlayed.textContent = `Rounds played : ${roundsPlayedNum}`;
+    computerNumbers = 0;
+    computerPoints.textContent = `Computer points : ${computerNumbers}`;
+    winer.textContent = "";
+    rounds = "";
+}
 });
+
 
 let reset = document.querySelector("#reset");
 reset.addEventListener("click",(e) => {
