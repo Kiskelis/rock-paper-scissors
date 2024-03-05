@@ -98,7 +98,7 @@ if(rounds < roundsPlayedNum){
     computerNumbers = 0;
     computerPoints.textContent = `Computer points : ${computerNumbers}`;
     winer.textContent = "";
-    rounds = "";
+    rounds;
 }
 });
 
@@ -129,7 +129,7 @@ if(rounds < roundsPlayedNum){
     computerNumbers = 0;
     computerPoints.textContent = `Computer points : ${computerNumbers}`;
     winer.textContent = "";
-    rounds = "";
+    rounds;
 }
 });
 
@@ -159,7 +159,7 @@ if(rounds < roundsPlayedNum){
     computerNumbers = 0;
     computerPoints.textContent = `Computer points : ${computerNumbers}`;
     winer.textContent = "";
-    rounds = "";
+    rounds;
 }
 });
 
