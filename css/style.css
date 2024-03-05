@@ -1,0 +1,54 @@
+body{
+    background-color: bisque;
+}
+
+#buttonsContainer{
+display: block;
+text-align: center;
+margin: 30px;
+}
+
+.btns:hover{
+background-color:hsl(60, 100%, 80%);
+}
+
+
+.btns{
+padding: 10px 20px;
+font-size: 30px;
+border-radius: 5px;
+background-color:hsl(60, 100%, 50%);
+cursor: pointer;
+}
+
+#outcome{
+text-align: center;
+margin-top: 30px;
+font-size: 50px;
+font-weight: 900;
+}
+
+#pointsContainer{
+margin-top: 20px;
+}
+
+.points{
+display: block;
+text-align: center;
+font-size: 30px;
+}
+
+#ui{
+text-align: center;
+margin: 30px;
+}
+
+.ux{
+font-size: 25px;
+}
+
+#winer{
+text-align: center;
+font-size: 50px;
+color: red;
+}
