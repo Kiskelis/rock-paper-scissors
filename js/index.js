@@ -15,6 +15,17 @@ let roundsPlayedNum = "";
 const winer = document.querySelector("#winer");
 let rounds = "";
 
+function resetStats(){
+    playerNumbers = 0;
+    playerPoints.textContent = `Player points : ${playerNumbers}`;
+    roundsPlayedNum = 0;
+    roundsPlayed.textContent = `Rounds played : ${roundsPlayedNum}`;
+    computerNumbers = 0;
+    computerPoints.textContent = `Computer points : ${computerNumbers}`;
+    winer.textContent = "";
+    rounds;
+}
+
 document.getElementById("submit").onclick = function(){
     rounds = document.getElementById("userInput").value;
     rounds = parseInt(rounds);
@@ -91,14 +102,7 @@ else if(computerNumbers === playerNumbers && rounds === roundsPlayedNum){
     winer.textContent = "NOBODY WINS THIS TIME..";
 }
 if(rounds < roundsPlayedNum){
-    playerNumbers = 0;
-    playerPoints.textContent = `Player points : ${playerNumbers}`;
-    roundsPlayedNum = 0;
-    roundsPlayed.textContent = `Rounds played : ${roundsPlayedNum}`;
-    computerNumbers = 0;
-    computerPoints.textContent = `Computer points : ${computerNumbers}`;
-    winer.textContent = "";
-    rounds;
+    resetStats()
 }
 });
 
@@ -122,14 +126,7 @@ else if(computerNumbers === playerNumbers && rounds === roundsPlayedNum){
     winer.textContent = "NOBODY WINS THIS TIME..";
 }
 if(rounds < roundsPlayedNum){
-    playerNumbers = 0;
-    playerPoints.textContent = `Player points : ${playerNumbers}`;
-    roundsPlayedNum = 0;
-    roundsPlayed.textContent = `Rounds played : ${roundsPlayedNum}`;
-    computerNumbers = 0;
-    computerPoints.textContent = `Computer points : ${computerNumbers}`;
-    winer.textContent = "";
-    rounds;
+    resetStats()
 }
 });
 
@@ -152,28 +149,14 @@ else if(computerNumbers === playerNumbers && rounds === roundsPlayedNum){
     winer.textContent = "NOBODY WINS THIS TIME..";
 }
 if(rounds < roundsPlayedNum){
-    playerNumbers = 0;
-    playerPoints.textContent = `Player points : ${playerNumbers}`;
-    roundsPlayedNum = 0;
-    roundsPlayed.textContent = `Rounds played : ${roundsPlayedNum}`;
-    computerNumbers = 0;
-    computerPoints.textContent = `Computer points : ${computerNumbers}`;
-    winer.textContent = "";
-    rounds;
+    resetStats()
 }
 });
 
 
 let reset = document.querySelector("#reset");
 reset.addEventListener("click",(e) => {
-    playerNumbers = 0;
-    playerPoints.textContent = `Player points : ${playerNumbers}`;
-    roundsPlayedNum = 0;
-    roundsPlayed.textContent = `Rounds played : ${roundsPlayedNum}`;
-    computerNumbers = 0;
-    computerPoints.textContent = `Computer points : ${computerNumbers}`;
-    winer.textContent = "";
-    rounds = "";
+    resetStats()
     });
 
 
